@@ -12,7 +12,7 @@
 
 <!--- # "Tech these projects" -->
 
-[![My Skills](https://skillicons.dev/icons?i=ts,nestjs,react,tailwind,paypal,firebase)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,firebase)](https://skillicons.dev)
 
 ## Getting Started
 
