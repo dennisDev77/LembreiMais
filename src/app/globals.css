@@ -1,3 +1,81 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Import Fonts */
+
+/* End Fonts */
+
+:root{
+    --font-family:"Poppis",Helvetica, sans-serif;
+    --color-white:#ECF0F1;
+    --color-black:#243342;
+    --color-destaque1:#6B21A8;
+    --color-destaque2:#6B21A8;   
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, #f1f5f9,var(--color-white),#f1f5f9);
+    min-height: 100vh;
+    color: var(--color-black);
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+input,
+textarea{
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+}
+button{
+    width: 100%;
+    border: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+}
+a{
+    display:inline-block;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+ul,
+li{
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Componentes Reutilizaveis */
+.container{
+  max-width: 65rem;
+  margin: 0 auto;
+}
