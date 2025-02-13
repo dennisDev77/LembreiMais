@@ -24,7 +24,7 @@ export default function Home() {
           <img src="/images/profile1.png" alt="Carregando Apoiadores" className='h-14 w-14'/>
           <img src="/images/profile1.png" alt="Carregando Apoiadores" className='h-14 w-14'/>
         </div>
-        
+
       </div>
     </section>
     </>

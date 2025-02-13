@@ -20,8 +20,8 @@ const Header = () => {
                 </div>
 
                 <nav className={`${styles.menu} font-medium text-lg flex justify-center items-center gap-4`}>
-                  <Link href='/'>Home</Link>
-                  <Link href='board'>Board</Link>
+                  <Link href='/'> <a>Home</a></Link>
+                  <Link href='board'> <a>Board</a> </Link>
                 </nav>
 
                 {
