@@ -1,0 +1,17 @@
+.boarder_user{
+    height: 20rem;
+    width: 24rem;
+}
+
+.apoiadores{
+    padding-top: 1rem;
+
+    img{
+        margin: 0 auto;
+        transition: all .2s;
+    }
+    img:hover{
+        transform: scale(1.1);
+        border:inherit;
+    }
+}
