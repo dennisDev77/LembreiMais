@@ -21,7 +21,7 @@ const Header = () => {
 
                 <nav className={`${styles.menu} font-medium text-lg flex justify-center items-center gap-4`}>
                   <Link href='/'> <a>Home</a></Link>
-                  <Link href='board'> <a>Board</a> </Link>
+                  <Link href='/board'> <a>Board</a> </Link>
                 </nav>
 
                 {
