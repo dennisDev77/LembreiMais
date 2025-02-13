@@ -10,7 +10,7 @@ const Header = () => {
   const session=true
 
   return (
-    <div className='py-4 shadow-sm sticky top-0 left-0 '>
+    <div className='py-4 shadow-sm bg-color_white sticky top-0 left-0  z-50'>
             <header className={`${styles.header} container flex justify-between items-center flex-wrap md:px-0 px-4`}>
 
                 <div className={styles.logo}>
