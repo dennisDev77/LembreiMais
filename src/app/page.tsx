@@ -6,9 +6,23 @@ export default function Home() {
 
   return ( 
     <>
-    <div className="">
-      <h1 className='text-3xl'>Pagina Inicial</h1>
-    </div>
+    <section className="container">
+      <div className={styles.boarder_user}>
+        <img src="/images/board-user.svg" alt="Carregando board"/>
+      </div>
+
+      <div>
+        <h2>Uma ferramenta para o seu dia a dia Escreva, Planeje e Organize </h2>
+        <p><span>100% Gratuito</span> e Online</p>
+      </div>
+
+      <div>
+        <h2>Apoiadores:</h2>
+        <div>
+          <img src="/images/profile1.png" alt="Carregando Apoiadores" />
+        </div>
+      </div>
+    </section>
     </>
   );
 }

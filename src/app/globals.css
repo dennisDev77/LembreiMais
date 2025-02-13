@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 /* Import Fonts */
-
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
 /* End Fonts */
 
 :root{
-    --font-family:"Poppis",Helvetica, sans-serif;
+    --font-family:"Roboto",Helvetica, sans-serif;
     --color-white:#ECF0F1;
     --color-black:#243342;
     --color-destaque1:#6B21A8;
-    --color-destaque2:#6B21A8;   
+    --color-destaque2:#70157A;   
 }
 
 *{
@@ -76,6 +76,11 @@ li{
 
 /* Componentes Reutilizaveis */
 .container{
-  max-width: 65rem;
+  max-width: 69rem;
   margin: 0 auto;
+}
+@media (max-width:46rem){
+    .container{
+        padding-inline: 1rem;
+    }
 }
