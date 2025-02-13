@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { LuGithub } from "react-icons/lu";
-import {FiX} from 'react-icons/fi'
+import { FiX } from 'react-icons/fi'
 import styles from './Header.module.scss'
 import SignInButton from '../Forms/Button/SignInButton';
 
 const Header = () => {
-const session=true
+
+  const session=true
 
   return (
     <div className='py-4 shadow-sm sticky top-0 left-0 '>
@@ -39,6 +40,7 @@ const session=true
                       <span>Entrar com github</span>
                     </SignInButton>
                 </div>
+
                 }
 
             </header>
