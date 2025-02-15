@@ -1,5 +1,10 @@
  .input{
  background-color: #d7dde9;
  box-shadow: 0 0 0 2px #243342;
-color:#6c52bb ;
+ color:#413468 ;
+ font-weight: 400;
+
+ &::placeholder{
+  color: #615d6d;
+ }
  }
