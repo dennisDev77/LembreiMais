@@ -21,7 +21,7 @@
 }
 
 body{
-    background-image: linear-gradient(to bottom right, #f1f5f9,var(--color-white),#f1f5f9);
+    background-image: linear-gradient(to bottom right, #ddd6fe,var(--color-white),#c3b5fdd2);
     min-height: 100vh;
     color: var(--color-black);
     font-size: 1rem;
