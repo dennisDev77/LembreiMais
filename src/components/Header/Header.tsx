@@ -1,27 +1,25 @@
 import React from 'react'
 import Link from 'next/link'
-import { LuGithub } from "react-icons/lu";
-import { FiX } from 'react-icons/fi'
 import styles from './Header.module.scss'
 import SignInButton from '../Forms/Button/SignInButton';
+import { LuGithub } from "react-icons/lu";
+import { FiX } from 'react-icons/fi'
 
 const Header = () => {
 
   const session=true
 
   return (
-    <div className='py-4 shadow-sm bg-color_white sticky top-0 left-0  z-50'>
+    <div className=' shadow-sm bg-color_black sticky top-0 left-0  z-50 text-color_white'>
             <header className={`${styles.header} container flex justify-between items-center flex-wrap md:px-0 px-4`}>
 
                 <div className={styles.logo}>
-                  <Link href='/'>
-                    <h1 className='text-4xl text-color_destaque1 font-medium'>Lembrei<span className='font-semibold'>+</span></h1>
-                  </Link>
+                  <Link href='/'> <img src='/logo.png' alt="Carregando logo" className='h-16' /></Link>
                 </div>
 
                 <nav className={`${styles.menu} font-medium text-lg flex justify-center items-center gap-4`}>
-                  <Link href='/'> <a>Home</a></Link>
-                  <Link href='/board'> <a>Board</a> </Link>
+                  <Link href='/'> Home </Link>
+                  <Link href='/board'> Meu Board  </Link>
                 </nav>
 
                 {
