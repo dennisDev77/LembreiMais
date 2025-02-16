@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './page.module.scss'
 
+export const metadata = {
+  title: "Home | Lembrei +",
+  description: "Home Gestor de tarfas",
+};
+
 export default function Home() {
 
   return ( 

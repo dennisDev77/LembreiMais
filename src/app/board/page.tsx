@@ -5,6 +5,11 @@ import Button from '../../components/Forms/Button/Button'
 import {FiPlus, FiCalendar, FiTrash, FiEdit3, FiClock} from 'react-icons/fi'
 import SupportButton from '../../components/SupportButton/SupportButton'
 
+export const metadata = {
+  title: "Board | Lembrei+",
+  description: "Meu Board Gestor de tarfas",
+};
+
 const page = () => {
   return (
     <>
