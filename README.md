@@ -30,7 +30,7 @@ cd lembreiMais
 npm run dev ou yarn dev
 ```
 
-## 📫 Contribuindo para EPITRACK
+## 📫 Contribuindo para Lembrei+
 
 Para contribuir siga estas etapas:
 
