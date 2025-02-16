@@ -1,0 +1,8 @@
+.button{
+    filter: drop-shadow(2px 1px 5px, rgba(0,0,0, 0.2));
+    transition: all .2s;
+
+    &:hover{
+        transform: scale(1.2);
+    }
+}
