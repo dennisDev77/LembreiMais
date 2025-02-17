@@ -7,19 +7,18 @@ export const metadata = {
   description: "Home Gestor de tarfas",
 };
 
-//Tornando a pagina home estatica
-async function getData(){
- const response=await fetch('', {next:{revalidate:3600}})
+// Tornando a pagina home estatica
+ async function getData(){
+  const response=await fetch('', {next:{revalidate:3600}})
  
- if(!response.ok){
-  throw new Error('Falha ao carregar dados')
+  if(!response.ok){
+   throw new Error('Falha ao carregar dados')
+  }
+
+  return response.json()
  }
 
- return response.json()
-}
-
 export default function Home() {
-const data=getData()
 
   return ( 
     <>

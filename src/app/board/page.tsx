@@ -4,13 +4,24 @@ import styles from './page.module.scss'
 import Button from '../../components/Forms/Button/Button'
 import {FiPlus, FiCalendar, FiTrash, FiEdit3, FiClock} from 'react-icons/fi'
 import SupportButton from '../../components/SupportButton/SupportButton'
+import { getServerSession } from "next-auth";
+import { authOptions } from "../api/auth/[...nextauth]/route";
+import { redirect } from 'next/navigation'
 
 export const metadata = {
   title: "Board | Lembrei+",
   description: "Meu Board Gestor de tarfas",
 };
 
-const page = () => {
+const page = async () => {
+
+   const session=await getServerSession(authOptions)
+   console.log(session)
+
+    if(!session){
+     redirect('/')
+    }
+   
   return (
     <>
     <main className='container'> 

@@ -6,8 +6,7 @@ import SignInButton from '../Forms/Button/SignInButton';
 import { FiX, FiGithub } from 'react-icons/fi';
 
 //import react auth for login
-import {signIn, signOut, useSession} from 'next-auth/react'
-
+import { signIn, signOut, useSession} from 'next-auth/react'
 
 export default function Header(){
     const {data:session}=useSession()

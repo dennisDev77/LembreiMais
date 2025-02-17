@@ -12,35 +12,26 @@ export const authOptions = {
   ],
 
  
-  // callbacks:{
-  //   async session({session, token}){
-  //     try{
-  //      return{
-  //       ...session,
-  //       id:token.sub
-  //      }
-  //     }catch{
-  //       return{
-  //         ...session,
-  //         id:null
-  //       }
-  //     }
-  //   },
+   callbacks:{
+     async session({session, token}){
+     
+        return{
+         ...session,
+         id: token.sub || token.email || token.name || session.user?.name || null,
+        }
+     },
 
-  //   async signIn({user, account, token}){
-  //     const {email}=user
+     async signIn({user}){
+       const {email}=user
 
-  //     try{
-  //       return true
-  //     }catch(err){
-  //       console.log(err)
-  //       return false
-  //     }
-  //   },
-  // }
+      //Permita login mesmo sem email
+      if(!user.email && !user.name) return false //Verifica se usuario tem email
+      return true
+     }
+   },
  
-  // //Our secret
-  // secret:process.env.NEXTAUTH_SECRET
+   //Our secret
+secret:process.env.NEXTAUTH_SECRET,
   
   }
 const handler = NextAuth(authOptions);
