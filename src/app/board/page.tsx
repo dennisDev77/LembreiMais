@@ -15,7 +15,7 @@ const page = () => {
     <>
     <main className='container'> 
         {/* Add Tarefa */}
-        <section className={`${styles.formContent}  p-4 rounded-md shadow-md `}>
+        <section className={`${styles.formContent}  p-4 rounded-md shadow-md`}>
 
             {/* Form add tarefa */}
           <form className={`flex justify-center items-center gap-1 pb-6`}>

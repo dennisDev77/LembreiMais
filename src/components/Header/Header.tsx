@@ -1,13 +1,16 @@
+ "use client";
 import React from 'react'
 import Link from 'next/link'
 import styles from './Header.module.scss'
 import SignInButton from '../Forms/Button/SignInButton';
-import { LuGithub } from "react-icons/lu";
-import { FiX } from 'react-icons/fi'
+import { FiX, FiGithub } from 'react-icons/fi';
+
+//import react auth for login
+import {signIn, signOut, useSession} from 'next-auth/react'
+
 
 const Header = () => {
-
-  const session=true
+    const {data:session}=useSession()
 
   return (
     <div className=' shadow-sm bg-color_black sticky top-0 left-0  z-50 text-color_white'>
@@ -24,20 +27,20 @@ const Header = () => {
 
                 {
                   session ?
-                <div className={styles.entrar}>
-                    <SignInButton type='button' className='font-medium flex justify-center items-center gap-1'>
-                      <img src="/images/profile1.png" alt="" className='h-10 w-10' />
-                      <span>Ola Dennis</span>
+                (<div className={styles.entrar}>
+                    <SignInButton type='button' className='font-medium flex justify-center items-center gap-1' onClick={()=>signOut()}>
+                      <img src={session.user.image} alt="" className='h-10 w-10' />
+                      <span>Ola {session.user.name.split(' ')[0]}</span>
                       <span className='text-xl text-color-black'><FiX/></span>
                     </SignInButton>
-                </div>
+                </div>)
                   :
-                <div className={styles.entrar}>
-                    <SignInButton type='button' className='font-medium flex justify-center items-center'>
-                      <span className='text-3xl text-violet-600'><LuGithub/></span>
+                (<div className={styles.entrar}>
+                    <SignInButton type='button' className='font-medium flex justify-center items-center gap-1' onClick={()=>signIn('github')}>
+                      <span className='text-3xl text-color_destaque1'><FiGithub/></span>
                       <span>Entrar com github</span>
                     </SignInButton>
-                </div>
+                </div>)
 
                 }
 
