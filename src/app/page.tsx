@@ -1,5 +1,22 @@
 import React from 'react'
 import styles from './page.module.scss'
+import { FC } from 'react';
+
+export const metadata = {
+  title: "Home | Lembrei +",
+  description: "Home Gestor de tarfas",
+};
+
+// Tornando a pagina home estatica
+ async function getData(){
+  const response=await fetch('', {next:{revalidate:3600}})
+ 
+  if(!response.ok){
+   throw new Error('Falha ao carregar dados')
+  }
+
+  return response.json()
+ }
 
 export default function Home() {
 
