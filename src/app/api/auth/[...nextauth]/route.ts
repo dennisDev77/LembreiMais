@@ -7,7 +7,7 @@ export const authOptions = {
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      authorization:{params:{scope:'read:user'}}
+      authorization:{params:{scope:'read:user, user:email'}}
     }),
   ],
 
@@ -25,12 +25,12 @@ export const authOptions = {
        const {email}=user
 
       //Permita login mesmo sem email
-      if(!user.email && !user.name) return false //Verifica se usuario tem email
+      if(!user.email && !user.name) return false //Verifica se usuario tem email ou nome
       return true
      }
    },
  
-   //Our secret
+  //Our secret
 secret:process.env.NEXTAUTH_SECRET,
   
   }
